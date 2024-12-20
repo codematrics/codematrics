@@ -1,156 +1,65 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Meta Tags for SEO -->
-    <meta name="description" content="CodeMatrics offers the best coding tutorials, programming news, and tech insights. Learn web development, JavaScript, Python, and more from expert guides. Stay tuned for updates!">
-    <meta name="keywords" content="coding tutorials, web development, JavaScript tutorials, Python tutorials, programming news, developer resources, CodeMatrics">
-    <meta name="author" content="CodeMatrics Team">
-    
-    <!-- Open Graph Meta Tags for Social Sharing -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="CodeMatrics - Best Coding Tutorials & Developer Insights">
-    <meta property="og:description" content="Learn programming with expert tutorials and stay updated with the latest in coding. Explore Python, JavaScript, and web development resources.">
-    <meta property="og:image" content="https://www.codematrics.com/assets/CodeMatrix.webp">
-    <meta property="og:url" content="https://www.codematrics.com">
-    <meta property="og:site_name" content="CodeMatrics">
-    
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CodeMatrics - Best Coding Tutorials & Developer Insights">
-    <meta name="twitter:description" content="Explore top coding tutorials and stay updated on programming trends with CodeMatrics. Perfect for developers of all levels.">
-    <meta name="twitter:image" content="https://www.codematrics.com/assets/CodeMatrix.webp">
-    
-    <!-- Schema Markup for Website -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "CodeMatrics",
-        "url": "https://www.codematrics.com",
-        "logo": "https://www.codematrics.com/assets/CodeMatrix.webp",
-        "description": "CodeMatrics is your go-to platform for coding tutorials, tech insights, and programming resources."
-    }
-    </script>
-    
-    <title>CodeMatrics - Best Coding Tutorials & Developer Insights</title>
-    <link rel="icon" href="assets/CodeMatrix.ico" type="image/x-icon">
-    
-    <!-- Style Enhancements for SEO and User Experience -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeMatrics</title>
+    <link rel="icon" href="assets/CodeMatrix.ico" type="image/x-icon" />
     <style>
-        body {
-            padding: 0;
-            margin: 0;
-            color: #ddd;
-            font-family: "Oswald", sans-serif;
-            display: flex;
-            /* justify-content: center; */
-            align-items: center;
-            height: 100vh;
-            background-color: #040404;
-            box-sizing: border-box;
-        }
+      body {
+        padding: 0px;
+        margin: 0px;
+        color: #ddd;
+        font-family: "Oswald", sans-serif;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        background-color: #040404;
+        padding-left: 50px;
+        box-sizing: border-box;
+      }
 
-        .cover {
-            /* text-align: center; */
-        }
+      .cover {
+        background-color: #040404;
+      }
 
-        h1 {
-            font-size: 60px;
-            margin-bottom: 10px;
-        }
+      h1 {
+        font-size: 60px;
+      }
 
-        h2 {
-            font-size: 70px;
-            margin: 0;
-        }
+      h2 {
+        font-size: 70px;
+        margin: 0px;
+      }
 
-        h3 {
-            font-size: 35px;
-            margin-top: 5px;
-        }
+      h3 {
+        font-size: 35px;
+        margin: 0px;
+      }
 
-        .logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 30px;
-        }
+      .logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
 
-        .logo img {
-            width: 130px;
-            height: auto;
-            margin-right: 10px;
-        }
-
-        .comming-text {
-            padding-left: 10px;
-        }
-
-        /* .cta-button {
-            display: inline-block;
-            background-color: #e76f51;
-            color: #fff;
-            padding: 15px 30px;
-            margin-top: 20px;
-            font-size: 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #f4a261;
-        } */
+      .comming-text{
+        padding-left: 10px;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="cover">
-        <!-- Logo Section -->
-        <div class="logo">
-            <img src="./assets/CodeMatrix.webp" alt="CodeMatrics Logo">
-            <h1>CodeMatrics</h1>
-        </div>
-
-        <!-- Main Content Section -->
-        <div class="comming-text">
-            <h2>Something Big<br>Is Happening</h2>
-            <h3>Stay Tuned</h3>
-        </div>
-
-        <!-- Call to Action -->
-        <div>
-            <a href="https://www.codematrics.com/signup" class="cta-button"></a>
-        </div>
+      <div class="logo">
+        <img src="./assets/CodeMatrix.webp" width="130px" alt="CodeMatrix" />
+        <h1>CodeMatrics</h1>
+      </div>
+      <div class="comming-text">
+        <h2>Something Big<br />Is happening</h2>
+        <br />
+        <h3>Stay Tuned</h3>
+      </div>
     </div>
-
-    <!-- Structured Data for FAQ (optional, if applicable) -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "What is CodeMatrics?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "CodeMatrics is a platform offering coding tutorials, tech news, and developer insights for all skill levels."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What programming languages are covered?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "We cover a wide range of programming languages including JavaScript, Python, React, HTML/CSS, and more!"
-                }
-            }
-        ]
-    }
-    </script>
-
-</body>
+  </body>
 </html>
