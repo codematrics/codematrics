@@ -1,0 +1,59 @@
+:root {
+  --bg-color: #141313;
+  --white: #ffffff;
+  --custom-white: #d2d2d2;
+  --custom-grey: #636363;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Oswald", sans-serif;
+}
+
+.cover {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+.text {
+  background: linear-gradient(
+    to right,
+    #7ced85 0%,
+    #4f69dc 20%,
+    #6f29f2 40%,
+    #e9429b 60%,
+    #e9429b 80%,
+    #330867 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
