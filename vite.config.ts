@@ -9,6 +9,9 @@ declare module "@remix-run/node" {
 }
 
 export default defineConfig({
+  build: {
+    outDir: 'build', // Make sure this is 'dist' or another folder Vercel recognizes
+  },
   plugins: [
     remix({
       future: {
