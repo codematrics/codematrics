@@ -10,10 +10,12 @@ declare module "@remix-run/node" {
 
 export default defineConfig({
   build: {
-    // Set the main output directory for Vite's production build.
-    outDir: 'build', // You can change this to 'dist' or another directory if needed.
+    outDir: 'build', // Set output directory to 'build' for Vercel
     rollupOptions: {
-      input: 'src/index.tsx', // Adjust this if your entry point is different
+      input: {
+        client: 'src/entry.client.tsx', // Client entry point
+        server: 'src/entry.server.tsx', // Server entry point for SSR
+      },
     },
   },
   plugins: [
