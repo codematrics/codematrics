@@ -9,15 +9,6 @@ declare module "@remix-run/node" {
 }
 
 export default defineConfig({
-  build: {
-    outDir: 'build', // Set output directory to 'build' for Vercel
-    rollupOptions: {
-      input: {
-        client: 'src/entry.client.tsx', // Client entry point
-        server: 'src/entry.server.tsx', // Server entry point for SSR
-      },
-    },
-  },
   plugins: [
     remix({
       future: {
