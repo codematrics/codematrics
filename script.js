@@ -1,10 +1,1 @@
-document.getElementById('enquire-form').addEventListener('submit', function (event) {
-    event.preventDefault();
-    const emailInput = document.getElementById('email-input');
-    const email = emailInput.value;
-
-    const subject = "New Enquiry";
-    const body = `Hello, I would like to enquire. My email is: ${email}`;
-
-    window.location.href = `mailto:codematricsitsolution@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-});
+document.getElementById("enquire-form").addEventListener("submit",function(e){e.preventDefault();let t=document.getElementById("email-input"),l=t.value,i=`Hello, I would like to enquire. My email is: ${l}`;window.location.href=`mailto:codematricsitsolution@gmail.com?subject=${encodeURIComponent("New Enquiry")}&body=${encodeURIComponent(i)}`}),document.getElementById("email-input").addEventListener("input",e=>{let t=document.getElementById("email-input"),l=t.value;console.log("email");let i=/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,n=i.test(l);console.log(n),n?document.getElementById("email-error").innerHTML="":document.getElementById("email-error").innerHTML="Enter Valid Email"});
