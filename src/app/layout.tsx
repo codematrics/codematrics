@@ -100,9 +100,7 @@ export const metadata: Metadata = {
     creator: '@codematrics',
   },
   verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
+    google: 'P0jHynGstXmNhoxIBQTnL-74RdmQrL1bBav43LQRTwA',
   },
   alternates: {
     canonical: 'https://codematrics.com',
