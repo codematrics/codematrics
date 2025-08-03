@@ -78,6 +78,7 @@ export const metadata: Metadata = {
     'transparent process',
     'collaborative approach',
     'customer focused',
+    'IT solutions for businesses',
   ],
   openGraph: {
     title: 'About CodeMatrics - Your Trusted IT Solutions Partner',
