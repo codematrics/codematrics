@@ -1,63 +1,110 @@
-import { Analytics } from "@vercel/analytics/react";
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import ConditionalLayout from '@/components/ConditionalLayout';
+import { Toaster } from '@/components/ui/toaster';
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "CodeMatrics - Leading the Way in Innovative IT Solutions",
+  metadataBase: new URL('https://codematrics.com'),
+  title: {
+    default:
+      'CodeMatrics - Premier IT Solutions & Software Development Company',
+    template: '%s | CodeMatrics',
+  },
   description:
-    "Transform your business with innovative IT solutions by CodeMatrics. Get IT consulting, cloud computing, cybersecurity, and custom software development services tailored for success.",
+    'CodeMatrics delivers cutting-edge IT solutions, web development, mobile apps, UI/UX design, and backend development. Transform your business with our expert technology services.',
   keywords: [
-    "Innovative IT solutions",
-    "Best IT services",
-    "IT consulting",
-    "Digital transformation",
-    "Cloud computing",
-    "Cybersecurity",
-    "Custom software development",
-    "IT infrastructure",
-    "Affordable IT services",
-    "Website Development",
-    "Website Design",
-    "Website Design and Development",
-    "Web Development",
-    "Mobile App Development",
-    "codematrix",
-    "codematrix It",
-    "codematric",
-    "codemetric",
-    "codematrics",
-    "codematrics",
+    'IT solutions',
+    'software development',
+    'web development',
+    'mobile app development',
+    'UI UX design',
+    'backend development',
+    'React development',
+    'Node.js development',
+    'full stack development',
+    'custom software',
+    'business automation',
+    'digital transformation',
+    'technology consulting',
+    'CodeMatrics',
+    'IT company India',
+    'software company India',
+    'tech solutions provider',
+    'enterprise software',
+    'startup development',
+    'e-commerce development',
+    'API development',
+    'database design',
+    'cloud solutions',
+    'microservices',
+    'responsive web design',
+    'mobile first design',
+    'JavaScript development',
+    'TypeScript development',
+    'Python development',
+    'MongoDB development',
+    'PostgreSQL development',
+    'SEO optimization',
+    'performance optimization',
+    'scalable applications',
   ],
+  authors: [{ name: 'CodeMatrics Team' }],
+  creator: 'CodeMatrics',
+  publisher: 'CodeMatrics',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: "CodeMatrics - Leading the Way in Innovative IT Solutions",
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://codematrics.com',
+    siteName: 'CodeMatrics',
+    title: 'CodeMatrics - Premier IT Solutions & Software Development Company',
     description:
-      "Stay tuned for cutting-edge IT solutions that will transform the way you work and grow.",
-    url: "https://codematrics.com",
+      'Transform your business with cutting-edge IT solutions. Expert web development, mobile apps, UI/UX design, and backend development services.',
     images: [
       {
-        url: "https://codematrics.com/assets/CodeMatrics.webp",
-        alt: "CodeMatrics Logo",
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'CodeMatrics - IT Solutions & Software Development',
       },
     ],
-    type: "website",
   },
   twitter: {
-    title: "CodeMatrics - Leading the Way in Innovative IT Solutions",
+    card: 'summary_large_image',
+    title: 'CodeMatrics - Premier IT Solutions & Software Development Company',
     description:
-      "Discover innovative IT solutions by CodeMatrics, transforming businesses for the future.",
-    images: ["https://codematrics.com/assets/CodeMatrics.webp"],
-    card: "summary_large_image",
+      'Transform your business with cutting-edge IT solutions. Expert web development, mobile apps, UI/UX design, and backend development services.',
+    images: ['/og-image.jpg'],
+    creator: '@codematrics',
+  },
+  verification: {
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
+    yahoo: 'your-yahoo-verification-code',
+  },
+  alternates: {
+    canonical: 'https://codematrics.com',
   },
 };
 
@@ -67,50 +114,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" dir="ltr">
-      <head>
-        <meta
-          name="google-site-verification"
-          content="P0jHynGstXmNhoxIBQTnL-74RdmQrL1bBav43LQRTwA"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          rel="preload"
-          href="https://codematrics.com/assets/CodeMatrics.webp"
-          as="image"
-        />
-        <link
-          rel="canonical"
-          href="https://codematrics.com"
-        />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "CodeMatrics",
-            url: "https://codematrics.com",
-            logo: "https://codematrics.com/assets/CodeMatrics.webp",
-            description:
-              "CodeMatrics is a hub for innovative IT solutions designed to transform businesses.",
-            sameAs: [
-              "https://www.facebook.com/CodeMatrics",
-              "https://twitter.com/CodeMatrics",
-              "https://www.linkedin.com/company/codematrics",
-            ],
-          })}
-        </script>
-      </head>
-      <head>
-        <meta name="theme-color" content="#000" />
-      </head>
+    <html lang='en'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black scrollbar-hidden text-white dark:text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="min-h-screen">{children}</div>
-        <Analytics />
+        <ConditionalLayout>{children}</ConditionalLayout>
+        <Toaster />
       </body>
     </html>
   );
