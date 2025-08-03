@@ -1,5 +1,6 @@
 import ConditionalLayout from '@/components/ConditionalLayout';
 import { Toaster } from '@/components/ui/toaster';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
@@ -121,6 +122,7 @@ export default function RootLayout({
         <ConditionalLayout>{children}</ConditionalLayout>
         <Toaster />
       </body>
+      <GoogleAnalytics gaId='G-ZV0X3M9MQC' />
     </html>
   );
 }
