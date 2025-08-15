@@ -167,34 +167,6 @@ export default function PortfolioDetailPage({
                   {project.views} views
                 </div>
               </div>
-
-              {/* Action Buttons */}
-              <div className='flex gap-4'>
-                {project.demoUrl && (
-                  <Button asChild>
-                    <a
-                      href={project.demoUrl}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                    >
-                      <ExternalLink className='w-4 h-4 mr-2' />
-                      View Live Demo
-                    </a>
-                  </Button>
-                )}
-                {project.githubUrl && (
-                  <Button variant='outline' asChild>
-                    <a
-                      href={project.githubUrl}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                    >
-                      <Github className='w-4 h-4 mr-2' />
-                      View Code
-                    </a>
-                  </Button>
-                )}
-              </div>
             </div>
           </div>
         </div>
